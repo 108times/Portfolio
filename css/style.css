@@ -10,7 +10,57 @@
 body{
     font-family: "Goudy Old Style" !important;
     background: var(--document-color);
+    font-size:1.5rem !important;
 }
+
+
+/*              HEADER          */
+#header{
+    position:fixed;
+    top:0;
+    background: white;
+    color:white;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    font-size:3rem!important;
+    transition-duration: 1s;
+}
+#nav{
+    max-width:55%;
+    max-height:70%;
+    background: deepskyblue;
+}
+#nav-list{
+    list-style-type: none !important;
+
+}
+.listItem{
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    border: 3px solid black;
+    width:80%;
+    text-align: center;
+}
+#navbar-toggle{
+    position:fixed;
+    top:5%;
+    left:90%;
+    cursor: pointer;
+    z-index: 17;
+    width:95px;
+    height:75px;
+}
+#navbar-toggle-icon{
+    width:100%;
+    height:100%;
+}
+/*              /HEADER          */
+
+
+
+
+/*              MAIN            */
 main{
     padding: 0;
     margin:0;
@@ -18,17 +68,30 @@ main{
     width: 100vw;
     display: grid;
     grid-template-columns: 1fr ;
-    grid-template-rows: 100vh 1fr 1fr;
+    grid-template-rows: 100vh 100vh 100vh;
     grid-gap:0;
     grid-template-areas:
     "about "
     "portfolio "
     "contact ";
 }
+
+
+/*  about   */
+/*  begin   */
 #about{
     grid-area: about;
     background-color: white;
- }
+}
+#about-content{
+    max-width:55% !important;
+    max-height:70% !important;
+    border-radius: 50px !important;
+    background: black !important;
+}
+/*  about   */
+/*  end   */
+
 #portfolio{
     grid-area: portfolio;
     background-color: darkblue;
@@ -37,3 +100,4 @@ main{
     grid-area: contact;
     background-color: deepskyblue;
 }
+/*              /MAIN           */
