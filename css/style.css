@@ -8,11 +8,13 @@
     box-sizing: border-box;
 }
 body{
-    font-family: "Goudy Old Style" !important;
+    font-family: "Roboto" !important;
     background: var(--document-color);
-    font-size:1.5rem !important;
+    font-size:1em !important;
 }
-
+canvas{
+    vertical-align: top;
+}
 
 /*              HEADER          */
 #header{
@@ -59,9 +61,10 @@ body{
     cursor: pointer;
     z-index: 17;
     width:85px;
-    height:65px;
+    height:75px;
     transition: var(--elements-transition);
     transform: rotate(0);
+    background: white;
 }
 #navbar-toggle:hover{
 
@@ -115,7 +118,14 @@ main{
     max-width:55% !important;
     max-height:70% !important;
     border-radius: 50px !important;
-    background: black !important;
+    background: rgba(0, 0, 0, 0) !important;
+    x-index:12 !important;
+    overflow: hidden;
+}
+#canvas{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
 }
 /*  about   */
 /*  end   */
