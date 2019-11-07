@@ -1,6 +1,6 @@
 :root{
     --document-color:linear-gradient(30deg, rgb(183, 92, 33), rgb(34, 196, 106));
-
+    --elements-transition:.55s cubic-bezier(0,.35,0,1),red .15s ease-out .1s;
 }
 *{
     padding: 0;
@@ -17,19 +17,19 @@ body{
 /*              HEADER          */
 #header{
     position:fixed;
-    top:0;
-    background: white;
+    top:-100vh;
+    background: #1b1e2e;
     color:white;
     width: 100vw;
     height: 100vh;
     z-index: 10;
     font-size:3rem!important;
-    transition-duration: 1s;
+    transition: var( --elements-transition);
 }
 #nav{
     max-width:55%;
     max-height:70%;
-    background: deepskyblue;
+    background: #2c2f46;
 }
 #nav-list{
     list-style-type: none !important;
@@ -38,9 +38,19 @@ body{
 .listItem{
     padding-top: 20px !important;
     padding-bottom: 20px !important;
-    border: 3px solid black;
     width:80%;
     text-align: center;
+    text-decoration: none;
+    transition: var( --elements-transition);
+}
+.listItem a{
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+.listItem:hover{
+    background: black;
 }
 #navbar-toggle{
     position:fixed;
@@ -48,12 +58,30 @@ body{
     left:90%;
     cursor: pointer;
     z-index: 17;
-    width:95px;
-    height:75px;
+    width:85px;
+    height:65px;
+    transition: var(--elements-transition);
+    transform: rotate(0);
+}
+#navbar-toggle:hover{
+
 }
 #navbar-toggle-icon{
     width:100%;
     height:100%;
+}
+.toggle-button-animation{
+    animation-name: toggle-nav-animation;
+    animation-duration: var(--elements-transition);
+    animation-iteration-count: infinite;
+}
+@keyframes toggle-nav-animation {
+    0%{
+            background: initial;
+    }
+   100%{
+            background: #0c5460;
+    }
 }
 /*              /HEADER          */
 
