@@ -30,7 +30,7 @@
 
 <!-- header / nav  -->
 <header id="header"
-        class="container-fluid justify-content-center align-items-center">
+        class="d-flex justify-content-center align-items-center">
 
         <nav id="nav" class="container-fluid p-5">
         <ul id="nav-list"
@@ -44,9 +44,14 @@
 </header>
 
 
-<button id="navbar-toggle" class="navbar-toggler" name="navbar-toggle">
-    <img id="navbar-toggle-icon" src="icons/menu.svg" name="navbare-toggle-icon">
-</button>
+<div id="navbar-toggle" class="navbar-toggler" name="navbar-toggle">
+    <div id="navbar-icon" class="w-100 h-100 d-flex flex-column justify-content-between align-items-center">
+        <i class="inner-element"></i>
+        <i class="inner-element" name="2"></i>
+        <i class="inner-element"></i>
+        <i class="inner-element extra"></i> 
+    </div>      
+</div>
 
 
 
@@ -55,21 +60,26 @@
 <main >
     <!-- About me section   -->
     <section id="about" class="d-flex justify-content-center align-items-center">
-        <div id="canvas"></div>
-        <script src="js/sketch.js"></script>
-        <script src="js/Star.js"></script>
-        <script type="text/javascript">
-
-        </script>
-        <div id="about-content"
-             class="container-fluid card card-body text-light p-5 border-radius-25">
-            <h1 class="m-auto pb-5">Hello, I'm Amir!</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
-                adipisci aliquam delectus dolore eaque earum eius eum hic illo illum
-                libero minima nam nesciunt possimus praesentium quaerat quasi quis
-                reprehenderit, saepe sit vel vitae voluptas voluptates? Cupiditate
-                fugiat iste magnam nihil porro repellat temporibus? Excepturi
-                exercitationem perferendis sit temporibus unde.</p>
+         
+            <div id="canvas"></div>
+            <script src="js/sketch.js"></script>
+            <script src="js/Star.js"></script>
+            <script type="text/javascript">
+            </script>
+            <div class="row">
+            <div class="col-xs-0 col-sm-1 col-md-1 col-lg-2"></div>
+                <div id="about-content"
+                class="container-fluid card card-body text-light p-5 border-radius-25
+                col-xs-12 col-sm-10 col-md-10 col-lg-8">
+               <h1 class="m-auto pb-5">Hello, I'm Amir!</h1>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
+                   adipisci aliquam delectus dolore eaque earum eius eum hic illo illum
+                   libero minima nam nesciunt possimus praesentium quaerat quasi quis
+                   reprehenderit, saepe sit vel vitae voluptas voluptates? Cupiditate
+                   fugiat iste magnam nihil porro repellat temporibus? Excepturi
+                   exercitationem perferendis sit temporibus unde.</p>
+           </div>
+           <div class="col-xs-0 col-sm-1 col-md-1 col-lg-2"></div>
         </div>
     </section>
 

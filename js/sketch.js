@@ -10,16 +10,15 @@ var speed;
 
 
 function setup() {
-    canvas = createCanvas(window.innerWidth, window.innerHeight +25);
+    canvas = createCanvas(window.innerWidth, window.innerHeight );
     canvas.parent("#canvas");
-    background(0,17,65)
-    for (var i = 0; i < 600; i++) {
+    for (var i = 0; i < 900; i++) {
         stars[i] = new Star();
     }
 }
 
 function windowResized() {
-    resizeCanvas(windowWidth, windowHeight+25);
+    resizeCanvas(windowWidth, windowHeight);
 }
 
 // function setup() {
@@ -30,9 +29,10 @@ function windowResized() {
 // }
 
 function draw() {
-  // speed = map(mouseX, 0, width, 0, 50);
-    speed = 16;
-  background(0);
+ // speed = map(mouseX, 0, width, 0, 50);
+speed=3;
+    // background("#3a46ff");
+    background('#5bc6c8');
   translate(width / 2, height / 2);
   for (var i = 0; i < stars.length; i++) {
     stars[i].update();
