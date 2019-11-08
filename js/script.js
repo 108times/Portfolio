@@ -29,6 +29,9 @@ ready = $(document).ready(function () {
             "top":"45%",
             "transform":"rotate(225deg)"
         });
+        $('#navbar-icon  :nth-child(n)').css({
+            // "background":"white"
+        })
     }
 
      
@@ -57,6 +60,10 @@ ready = $(document).ready(function () {
             "top":"80%",
             "transform":"rotate(0)"
         });
+
+        $('#navbar-icon  :nth-child(n)').css({
+            // "background":"black"
+        })
     }
 
 
@@ -92,18 +99,30 @@ ready = $(document).ready(function () {
 
     let menu_ite =menu_list.find('li');
     let menu_item = menu_ite.find('a');
-
     let nav = $('#nav');
     let navColor =nav.css("background");
 
-    menu_item.hover( function () {
+    menu_item.mouseenter( function () {
         let txt = this.text;
+        let swidth = $(this).css("width");
         let string = "var(--"+txt+"-color)";
         console.log(string);
-        nav.css({"background":string});
+        $(this).css({
+            "background-color":"#253155",
+        })
+        $(this).parent().css({
+            "width":"30%"
+        })
+        // nav.css({"color":string});
 
-    },function () {
-        nav.css({"background":navColor});
+    }).mouseleave(function () {
+        // nav.css({"background":navColor});
+        $(this).css({
+            "background-color":"inherit",
+        })
+        $(this).parent().css({
+            "width":"80%"
+        })
     })
 
 

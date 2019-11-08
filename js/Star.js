@@ -4,8 +4,8 @@
 // Code for: https://youtu.be/17WoOqgXsRM
 
 function Star() {
-  this.x = random(-width, width);
-  this.y = random(-height, height);
+  this.x = random(-width/2, width/2);
+  this.y = random(-height/2, height/2);
   this.z = random(width);
   this.pz = this.z;
 
@@ -13,8 +13,8 @@ function Star() {
     this.z = this.z - speed;
     if (this.z < 1) {
       this.z = width;
-      this.x = random(-width, width);
-      this.y = random(-height, height);
+      this.x = random(-width/2, width/2);
+      this.y = random(-height/2, height/2);
       this.pz = this.z;
     }
   }
