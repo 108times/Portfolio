@@ -14,7 +14,10 @@
 body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
     background: var(--document-color);
+    /*background: url("https://i.pinimg.com/originals/63/c2/6d/63c26dc881e4d1a91c806c2afba355cd.jpg");*/
     font-size:1em !important;
+    width: 100vw;
+    height: 100vh;
 }
 canvas{
     vertical-align: top;
@@ -144,11 +147,11 @@ canvas{
 
 
 /*              MAIN            */
-#main{
+main{
     padding: 0;
     margin:0;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
@@ -159,8 +162,8 @@ canvas{
 #main{
     padding: 0;
     margin:0;
-    height: 100vh;
-    width: 300vw;
+    height: 100%;
+    width: 300%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -173,31 +176,34 @@ canvas{
 /*  about   */
 /*  begin   */
 #about{
+    /*background: rgba(255, 255, 255, 0) !important;*/
+    z-index:2 !important;
+    /* color:black !important; */
+    padding-right: 25%;
+    padding-left: 25%;
     grid-area: about;
   
 }
 #about-content{
-    position: absolute;
-    background: rgb(255, 255, 255, 0) !important;
-    z-index:2 !important;
-    overflow: hidden;
-    /* color:black !important; */
-    padding-right: 25%;
-    padding-left: 25%;
+
 }
-#about-content-canvas{
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
+#canvas-background{
+    position: fixed;
+    width: 84vw;
+    height: 90vh;
+    border-radius:65px;
+    overflow: hidden;
+    border:1px solid white;
 }
 #canvas{
-    position: absolute;
-    top:5vh;
-    width: 89%;
-    left:3%;
-    
-    height: 90%;
+    position: fixed;
+        margin-top:5vh;
+        width: 84vw;
+        margin-left: 3vw;
+        border-radius:65px;
+        height: 90vh;
     overflow: hidden;
+    border:none;
 }
 /*  about   */
 /*  end   */

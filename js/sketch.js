@@ -8,12 +8,12 @@ var stars = [];
 var speed;
 
 
-let myWidth = parseInt($('#about').css('width'));
-let myHeight = parseInt($('#about').css('height'));
+let myWidth = parseInt($('#canvas-background').css('width'));
+let myHeight = parseInt($('#canvas-background').css('height'));
 console.log(myWidth+" "+myHeight);
 function setup() {
-    canvas = createCanvas(myWidth, myHeight );
-    canvas.parent("#canvas");
+    canvas = createCanvas(myWidth,myHeight);
+    canvas.parent("#canvas-background");
     for (var i = 0; i < 350; i++) {
         stars[i] = new Star();
     }
@@ -32,7 +32,7 @@ function windowResized() {
 
 function draw() {
 //  speed = map(mouseX, 0, height, 0, 32);
-speed=15;
+speed=10;
     background("black");
     // background('#5bc6c8');
   translate(width / 2, height / 2);
