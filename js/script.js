@@ -1,9 +1,12 @@
 let ready;
 let transform_rotate = 0;
+let this_url = window.location.href;
+
+console.log(this_url);
+// console.log(getType(this_url));
 ready = $(document).ready(function () {
 
 
-  
     function burger_become_x(){
         let borger_icon_1 = $('#navbar-icon i:nth-child(1)');
         let borger_icon_2 = $('#navbar-icon i:nth-child(2)');
@@ -114,7 +117,6 @@ ready = $(document).ready(function () {
             "width":"30%"
         })
         // nav.css({"color":string});
-
     }).mouseleave(function () {
         // nav.css({"background":navColor});
         $(this).css({
@@ -123,9 +125,32 @@ ready = $(document).ready(function () {
         $(this).parent().css({
             "width":"80%"
         })
+    });
+
+    let next =  $('#next-toggle');
+    // let main = $('#main');
+    // let offset =main.css("left");
+    // console.log("offset = "+offset);
+    //  //offset =offset.replace(
+    //  offset = parseInt(main.css("left"));
+    //
+    // console.log("offset = "+offset);
+    next.on('click', function () {
+        console.log(this_url);
+
+   if (this_url.contains('#portfolio')){
+                next.attr("href","#contact");
+        };
+
+        // if (parseInt(main.css("left")) >= -200){
+        //     offset = offset - 100;
+        //     $('#main').css({
+        //         "left":offset+"%"
+        //     })
+        //     console.log(offset);
+        // }
+        // console.log("offset = "+offset);
     })
-
-
 
     });
 

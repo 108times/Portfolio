@@ -8,13 +8,14 @@ var stars = [];
 var speed;
 
 
-let myWidth = parseInt($('#canvas-background').css('width'));
-let myHeight = parseInt($('#canvas-background').css('height'));
+let myWidth = parseInt($('#canvas').css('width'));
+let myHeight = parseInt($('#canvas').css('height'));
 console.log(myWidth+" "+myHeight);
 function setup() {
-    canvas = createCanvas(myWidth,myHeight);
-    canvas.parent("#canvas-background");
-    for (var i = 0; i < 350; i++) {
+    // canvas = createCanvas(myWidth,myHeight);
+    canvas = createCanvas(0,0);
+    canvas.parent("#canvas");
+    for (var i = 0; i < 150; i++) {
         stars[i] = new Star();
     }
 }
