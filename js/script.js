@@ -45,22 +45,22 @@ ready = $(document).ready(function () {
         let borger_icon_4 = $('#navbar-icon i:nth-child(4)');
 
         borger_icon_1.css({
-            "top":"10%",
+            "top":"30%",
             "transform":"rotate(0)"
         });
         
         borger_icon_2.css({
-            "top":"45%",
+            "top":"50%",
             "transform":"rotate(0)"
         });
         
         borger_icon_3.css({
-            "top":"45%",
+            "top":"50%",
             "transform":"rotate(0)"
         });
         
         borger_icon_4.css({
-            "top":"80%",
+            "top":"70%",
             "transform":"rotate(0)"
         });
 
@@ -71,7 +71,8 @@ ready = $(document).ready(function () {
 
 
     let menu_toggle = $('#navbar-toggle');
-    menu_toggle.on('click', function () {
+
+    menu_toggle.on('click touchstart', function () {
     transform_rotate +=90;
     let str = "rotate(";
 
@@ -137,11 +138,41 @@ ready = $(document).ready(function () {
     // console.log("offset = "+offset);
     next.on('click', function () {
         console.log(this_url);
+        let initialOffset = box.css("")
+        });
+});
 
-   if (this_url.contains('#portfolio')){
-                next.attr("href","#contact");
-        };
+        let box = $('.box') ;
+        function removeOffset() {
+            box.removeClass('show-bottom').removeClass('show-top').removeClass('show-back').removeClass('show-right').removeClass('show-left').removeClass('show-front');
+        }
 
+
+        let navItem = $('.listItem');
+            console.log(navItem);
+
+        navItem.on('click', function () {
+            let href = $(this).find('a').attr("href");
+            console.log(href);
+            switch (href) {
+                case "#about":
+                    removeOffset();
+                    box.addClass("show-front");
+                    break;
+                case "#skills":
+                    removeOffset();
+                    box.addClass("show-right");
+                    break
+                case "#portfolio":
+                    removeOffset();
+                    box.addClass("show-left");
+                    break;
+                case "#contact":
+                    removeOffset();
+                    box.addClass("show-back");
+                    break;
+            }
+        })
         // if (parseInt(main.css("left")) >= -200){
         //     offset = offset - 100;
         //     $('#main').css({
@@ -150,8 +181,8 @@ ready = $(document).ready(function () {
         //     console.log(offset);
         // }
         // console.log("offset = "+offset);
-    })
 
-    });
+
+
 
 
